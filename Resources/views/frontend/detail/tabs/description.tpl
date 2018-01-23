@@ -1,6 +1,6 @@
 {extends file="parent:frontend/detail/tabs/description.tpl"}
 
-{block name="frontend_detail_description_paul_right"}
+{block name="frontend_detail_description"}
 	{if paulActiveDescriptionMessage}
 		<div class="alert is--{$paulAlertType} is--rounded">
     			<div class="alert--icon">
