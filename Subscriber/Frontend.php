@@ -27,11 +27,9 @@ class Frontend implements SubscriberInterface
      * @param \Enlight_Event_EventArgs $args
      */
     public function onFrontendPostDispatch(\Enlight_Event_EventArgs $args)
-    {
-        /** @var $controller \Enlight_Controller_Action */
-        $controller = $args->getSubject();
-        $view = $controller->View();
-        $view->addTemplateDir($this->container->getParameter('paul_alert_message_description.plugin_dir') . '/Resources/views');
+    {	    
+	$controller = $args->getSubject();
+    	$view = $controller->View();
         
         //get config
         $config = $this->container->get('shopware.plugin.config_reader')->getByPluginName('PaulAlertMessageDescription', $shop);
