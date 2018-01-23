@@ -4,7 +4,7 @@ namespace PaulAlertMessageDescription;
 
 use Shopware\Components\Plugin\Context\InstallContext;
 
-class PaulAlertMessageDescription extends \Shopware\Components\Plugin
+class PaulAlertMessageDescription extends Plugin
 {
     /**
      * @param ContainerBuilder $container
