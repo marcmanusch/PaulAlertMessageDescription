@@ -36,9 +36,12 @@ class PaulAlertMessageDescription extends \Shopware\Components\Plugin
 
         $active = $config['active'];
         $paulMessageDescription = $config['paulMessageDescription'];
+	$paulAlertType = $config['paulAlertType'];
+	    
 
         $view->assign('paulActiveDescriptionMessage', $active);
         $view->assign('paulMessageDescription', $paulMessageDescription);
+	$view->assign('paulAlertType', $paulAlertType);
 
     }
 
