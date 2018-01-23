@@ -3,6 +3,7 @@
 namespace PaulAlertMessageDescription;
 
 use Shopware\Components\Plugin\Context\InstallContext;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Shopware\Components\Plugin;
 
 class PaulAlertMessageDescription extends Plugin
