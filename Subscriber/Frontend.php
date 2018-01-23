@@ -30,6 +30,7 @@ class Frontend implements SubscriberInterface
     {	    
 	$controller = $args->getSubject();
     	$view = $controller->View();
+	$view->addTemplateDir($this->pluginBasePath . '/Resources/views/');
         
         //get config
         $config = $this->container->get('shopware.plugin.config_reader')->getByPluginName('PaulAlertMessageDescription', $shop);
