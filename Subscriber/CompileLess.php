@@ -39,7 +39,7 @@ class CompileLess implements SubscriberInterface
         $pluginDir = $this->container->getParameter('paul_alert_message_description.plugin_dir');
         return new LessDefinition(
             [],
-            [$pluginDir . '/Resources/Views/frontend/_public/src/less/all.less'],
+            [$pluginDir . '/Resources/views/frontend/_public/src/less/all.less'],
             $pluginDir
         );
     }
