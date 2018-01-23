@@ -3,6 +3,7 @@
 namespace PaulAlertMessageDescription;
 
 use Shopware\Components\Plugin\Context\InstallContext;
+use Shopware\Components\Plugin;
 
 class PaulAlertMessageDescription extends Plugin
 {
