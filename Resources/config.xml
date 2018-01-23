@@ -7,12 +7,7 @@
             <name>active</name>
             <label>Aktiv</label>
         </element>
-            
-        <element type="html">
-            <name>paulMessageDescription</name>
-            <label>Text</label>
-        </element>
-            
+          
         <element required="true" type="select">
                 <name>paulAlertType</name>
                 <label lang="de">Darstellung</label>
@@ -35,6 +30,12 @@
                                 <label lang="DE">Warnung (gelb)</label>
                         </option>
                 </store>
+        </element>            
+            
+        <element type="html">
+            <name>paulMessageDescription</name>
+            <label>Text</label>
         </element>
+            
     </elements>
 </config>
