@@ -32,5 +32,18 @@ class Frontend implements SubscriberInterface
         $controller = $args->getSubject();
         $view = $controller->View();
         $view->addTemplateDir($this->container->getParameter('paul_alert_message_description.plugin_dir') . '/Resources/Views');
+        
+        //get config
+        $config = $this->container->get('shopware.plugin.config_reader')->getByPluginName($this->getName());
+
+        // get plugin settings
+        $active = $config['active'];
+        $paulMessageDescription = $config['paulMessageDescription'];
+	    $paulAlertType = $config['paulAlertType'];
+	    
+        // aggign to frontend
+        $view->assign('paulActiveDescriptionMessage', $active);
+        $view->assign('paulMessageDescription', $paulMessageDescription);
+	    $view->assign('paulAlertType', $paulAlertType);
     }
 }
