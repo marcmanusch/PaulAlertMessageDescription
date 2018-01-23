@@ -31,7 +31,7 @@ class Frontend implements SubscriberInterface
         /** @var $controller \Enlight_Controller_Action */
         $controller = $args->getSubject();
         $view = $controller->View();
-        $view->addTemplateDir($this->container->getParameter('paul_alert_message_description.plugin_dir') . '/Resources/Views');
+        $view->addTemplateDir($this->container->getParameter('paul_alert_message_description.plugin_dir') . '/Resources/views');
         
         //get config
         $config = $this->container->get('shopware.plugin.config_reader')->getByPluginName($this->getName());
@@ -39,11 +39,11 @@ class Frontend implements SubscriberInterface
         // get plugin settings
         $active = $config['active'];
         $paulMessageDescription = $config['paulMessageDescription'];
-	    $paulAlertType = $config['paulAlertType'];
+	$paulAlertType = $config['paulAlertType'];
 	    
         // aggign to frontend
         $view->assign('paulActiveDescriptionMessage', $active);
         $view->assign('paulMessageDescription', $paulMessageDescription);
-	    $view->assign('paulAlertType', $paulAlertType);
+	$view->assign('paulAlertType', $paulAlertType);
     }
 }
